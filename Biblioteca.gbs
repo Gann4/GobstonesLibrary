@@ -3,25 +3,40 @@ procedure PonerUnaDeCada()
     /*
     PROPÓSITO
         Poner una bolita de cada color en la celda actual.
-    PRECONDICIÓNES
-        El cabezal debe estar posicionado en una celda válida.
+    PRECONDICIONES
+        Ninguna.
     */
 
     Poner(Verde)
     Poner(Negro)
     Poner(Rojo)
-    Poner(Verde)
+    Poner(Azul)
+}
+
+procedure SacarUnaDeCada()
+{
+    /*
+    PROPÓSITO
+        Saca una bolita de cada color en la celda actual.
+    PRECONDICIONES
+        Debe haber al menos una bolita de cada color en la celda actual.
+    */
+
+    Sacar(Verde)
+    Sacar(Negro)
+    Sacar(Rojo)
+    Sacar(Azul)
 }
 
 procedure PonerVarias_DeColor(cantidad, color)
 {
     /*
     PROPÓSITO
-        Poner **cantidad** bolitas de color **color**
+        Pone **cantidad** bolitas de color **color** en la celda actual.
     PRECONDICIONES
-        El cabezal debe estar posicionadl en una celda válida.
+        Ninguna.
     */
-    
+
     repeat(cantidad)
     {
         Poner(Color)
