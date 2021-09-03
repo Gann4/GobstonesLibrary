@@ -36,8 +36,8 @@ procedure PonerVarias_DeColor(cantidad, color)
     PRECONDICIONES
         Ninguna.
     PARÁMETROS
-        **cantidad** - Entero: Cantidad de bolitas.
-        **color** - Color: Color de bolitas.
+        "cantidad": -Entero- Cantidad de bolitas.
+        "color": -Color- Color de bolitas.
     */
 
     repeat(cantidad)
@@ -54,8 +54,8 @@ procedure SacarVarias_DeColor(cantidad, color)
     PRECONDICIONES
         Deben existir al menos **cantidad** bolitas de color **color** en la celda actual.
     PARÁMETROS
-        **cantidad** - Entero: Cantidad de bolitas.
-        **color** - Color: Color de bolitas.
+        "cantidad": -Entero- Cantidad de bolitas.
+        "color": -Color- Color de bolitas.
     */
 
     repeat(cantidad)
