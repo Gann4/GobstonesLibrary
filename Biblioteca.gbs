@@ -1,10 +1,10 @@
 procedure PonerUnaDeCada()
 {
     /*
-    PROPÓSITO
-        Poner una bolita de cada color en la celda actual.
-    PRECONDICIONES
-        Ninguna.
+        PROPÓSITO
+            Poner una bolita de cada color en la celda actual.
+        PRECONDICIONES
+            Ninguna.
     */
 
     Poner(Verde)
@@ -16,10 +16,10 @@ procedure PonerUnaDeCada()
 procedure SacarUnaDeCada()
 {
     /*
-    PROPÓSITO
-        Saca una bolita de cada color en la celda actual.
-    PRECONDICIONES
-        Debe haber al menos una bolita de cada color en la celda actual.
+        PROPÓSITO
+            Saca una bolita de cada color en la celda actual.
+        PRECONDICIONES
+            Debe haber al menos una bolita de cada color en la celda actual.
     */
 
     Sacar(Verde)
@@ -28,16 +28,16 @@ procedure SacarUnaDeCada()
     Sacar(Azul)
 }
 
-procedure PonerVarias_DeColor(cantidad, color)
+procedure PonerVarias_DeColor_(cantidad, color)
 {
     /*
-    PROPÓSITO
-        Pone **cantidad** bolitas de color **color** en la celda actual.
-    PRECONDICIONES
-        Ninguna.
-    PARÁMETROS
-        "cantidad": -Entero- Cantidad de bolitas.
-        "color": -Color- Color de bolitas.
+        PROPÓSITO
+            Pone **cantidad** bolitas de color **color** en la celda actual.
+        PRECONDICIONES
+            Ninguna.
+        PARÁMETROS
+            "cantidad": -Entero- Cantidad de bolitas.
+            "color": -Color- Color de bolitas.
     */
 
     repeat(cantidad)
@@ -46,16 +46,16 @@ procedure PonerVarias_DeColor(cantidad, color)
     }
 }
 
-procedure SacarVarias_DeColor(cantidad, color)
+procedure SacarVarias_DeColor_(cantidad, color)
 {
     /*
-    PROPÓSITO
-        Saca **cantidad** bolitas de color **color** en la celda actual.
-    PRECONDICIONES
-        Deben existir al menos **cantidad** bolitas de color **color** en la celda actual.
-    PARÁMETROS
-        "cantidad": -Entero- Cantidad de bolitas.
-        "color": -Color- Color de bolitas.
+        PROPÓSITO
+            Saca **cantidad** bolitas de color **color** en la celda actual.
+        PRECONDICIONES
+            Deben existir al menos **cantidad** bolitas de color **color** en la celda actual.
+        PARÁMETROS
+            "cantidad": -Entero- Cantidad de bolitas.
+            "color": -Color- Color de bolitas.
     */
 
     repeat(cantidad)
