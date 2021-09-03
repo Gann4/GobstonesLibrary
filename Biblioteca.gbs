@@ -1,8 +1,10 @@
 procedure PonerUnaDeCada()
 {
     /*
-    PROPÓSITO:  Poner una bolita de cada color en la celda actual.
-    PRECONDICIÓNES:   El cabezal debe estar posicionado en alguna celda.
+    PROPÓSITO
+        Poner una bolita de cada color en la celda actual.
+    PRECONDICIÓNES
+        El cabezal debe estar posicionado en alguna celda.
     */
 
     Poner(Verde)
