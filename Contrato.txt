@@ -1,0 +1,12 @@
+/*
+    PROPÓSITO:
+        * Escribí el propósito acá.
+    PRECONDICIONES
+        * Precondición 1
+        * Precondición 2
+    OBSERVACIONES
+        * Escribí tus observaciones acá
+    PARÁMETROS
+        "parámetro1": -Tipo- Descripción del parámetro.
+        "parámetro2": -Tipo- Descripción del parámetro.
+*/
