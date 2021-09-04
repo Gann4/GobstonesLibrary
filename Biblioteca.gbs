@@ -86,13 +86,13 @@ procedure PonerDistanciado_EnDirección_DeColor_(distancia, dirección, color)
 {
     /*
         PROPÓSITO:
-            * Pone una bolita de color **color** a **distancia** celdas desde la celda actual en dirección **dirección**, el cabezal mantiene su posición inicial.
-        PRECONDICIONES
+            * Pone una bolita de color **color** a **distancia** celdas desde la celda actual en dirección **dirección**, manteniendo la posición inicial del cabezal.
             * Deben existir **distancia** celdas lindantes al **dirección** de la celda actual.
+            * La celda ubicada a **distancia** posiciones en dirección al **dirección** debe estar vacía.
         PARÁMETROS
-            "distancia": -Tipo- Descripción del parámetro.
-            "dirección": -Tipo- Descripción del parámetro.
-            "dirección": -Tipo- Descripción del parámetro.
+            "distancia": -Entero- Distancia a poner la bolita.
+            "dirección": -Dirección- Dirección a poner la bolita.
+            "color": -Color- Color de la bolita.
     */
 
     MoverCabezal_EnDirección_(distancia, dirección)
@@ -104,16 +104,18 @@ procedure PonerVarios_ADistancia_EnDirección_DeColor_(cantidad, distancia, dire
 {
     /*
         PROPÓSITO:
-            * Pone **cantidad** bolitas de color **color** a **distancia** celdas desde la celda actual en dirección **dirección**, el cabezal mantiene su posición inicial.
+            * Pone **cantidad** bolitas de color **color** a **distancia** celdas desde la celda actual en dirección **dirección**, manteniendo la posición inicial del cabezal.
         PRECONDICIONES
             * Deben existir **distancia** celdas lindantes al **dirección** de la celda actual.
+            * La celda ubicada a **distancia** posiciones en dirección al **dirección** debe estar vacía.
         PARÁMETROS
-            "distancia": -Tipo- Descripción del parámetro.
-            "dirección": -Tipo- Descripción del parámetro.
-            "dirección": -Tipo- Descripción del parámetro.
+            "cantidad": -Entero- Cantidad de bolitas a poner.
+            "distancia": -Entero- Distancia a poner la bolita.
+            "dirección": -Dirección- Dirección a poner la bolita.
+            "color": -Color- Color de la bolita.
     */
 
-    MoverCabezal_EnDirección_(distancia, dirección)
-    PonerVarias_DeColor_(cantidad, color)
-    MoverCabezal_EnDirección_(distancia, -dirección)
+    repeat(cantidad){
+        PonerDistanciado_EnDirección_DeColor_(distancia, dirección, color)
+    }
 }
