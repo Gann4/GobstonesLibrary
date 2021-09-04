@@ -42,7 +42,7 @@ procedure PonerVarias_DeColor_(cantidad, color)
 
     repeat(cantidad)
     {
-        Poner(Color)
+        Poner(color)
     }
 }
 
@@ -82,7 +82,7 @@ procedure MoverCabezal_EnDirección_(cantidad, dirección)
     }
 }
 
-procedure PonerDistanciado_EnDirección_DeColor(distancia, dirección, color)
+procedure PonerDistanciado_EnDirección_DeColor_(distancia, dirección, color)
 {
     /*
         PROPÓSITO:
@@ -94,4 +94,8 @@ procedure PonerDistanciado_EnDirección_DeColor(distancia, dirección, color)
             "dirección": -Tipo- Descripción del parámetro.
             "dirección": -Tipo- Descripción del parámetro.
     */
+
+    MoverCabezal_EnDirección_(distancia, dirección)
+    Poner(color)
+    MoverCabezal_EnDirección_(distancia, -dirección)
 }
