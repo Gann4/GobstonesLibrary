@@ -63,3 +63,21 @@ procedure SacarVarias_DeColor_(cantidad, color)
         Sacar(color)
     }
 }
+
+procedure MoverCabezal_EnDirección_(cantidad, dirección)
+{
+    /*
+        PROPÓSITO:
+            * Mueve el cabezal **cantidad** veces en dirección **dirección**
+        PRECONDICIONES
+            * Deben existir **cantidad** celdas lindantes al **dirección** de la celda actual.
+        PARÁMETROS
+            "cantidad": -Entero- Cantidad de veces a mover el cabezal.
+            "dirección": -Dirección- Dirección a mover el cabezal.
+    */
+
+    repeat(cantidad)
+    {
+        Mover(dirección)
+    }
+}
