@@ -28,7 +28,7 @@ procedure SacarUnaDeCada()
     Sacar(Azul)
 }
 
-procedure PonerVarias_DeColor_(cantidad, color)
+procedure Poner_DeColor_(cantidad, color)
 {
     /*
         PROPÓSITO
@@ -46,7 +46,7 @@ procedure PonerVarias_DeColor_(cantidad, color)
     }
 }
 
-procedure SacarVarias_DeColor_(cantidad, color)
+procedure Sacar_DeColor_(cantidad, color)
 {
     /*
         PROPÓSITO
@@ -64,7 +64,7 @@ procedure SacarVarias_DeColor_(cantidad, color)
     }
 }
 
-procedure MoverCabezal_EnDirección_(cantidad, dirección)
+procedure Mover_VecesAl_(cantidad, dirección)
 {
     /*
         PROPÓSITO:
@@ -82,13 +82,15 @@ procedure MoverCabezal_EnDirección_(cantidad, dirección)
     }
 }
 
-procedure PonerDistanciado_EnDirección_DeColor_(distancia, dirección, color)
+procedure Poner_Distanciado_EnDirección_DeColor_(cantidad, distancia, dirección, color)
 {
     /*
         PROPÓSITO:
             * Pone una bolita de color **color** a **distancia** celdas desde la celda actual en dirección **dirección**, manteniendo la posición inicial del cabezal.
             * Deben existir **distancia** celdas lindantes al **dirección** de la celda actual.
             * La celda ubicada a **distancia** posiciones en dirección al **dirección** debe estar vacía.
+        PRECONDICIONES:
+            * 
         PARÁMETROS
             "distancia": -Entero- Distancia a poner la bolita.
             "dirección": -Dirección- Dirección a poner la bolita.
@@ -96,26 +98,28 @@ procedure PonerDistanciado_EnDirección_DeColor_(distancia, dirección, color)
     */
 
     MoverCabezal_EnDirección_(distancia, dirección)
-    Poner(color)
+    Poner_DeColor_(cantidad, color)
     MoverCabezal_EnDirección_(distancia, -dirección)
 }
 
-procedure PonerVarios_ADistancia_EnDirección_DeColor_(cantidad, distancia, dirección, color)
+// /!\ FALTA PROBAR EL PROCEDIMIENTO
+procedure DibujarLínea_HaciaEl_DeLargo_(color, dirección, largo)
 {
     /*
         PROPÓSITO:
-            * Pone **cantidad** bolitas de color **color** a **distancia** celdas desde la celda actual en dirección **dirección**, manteniendo la posición inicial del cabezal.
-        PRECONDICIONES
-            * Deben existir **distancia** celdas lindantes al **dirección** de la celda actual.
-            * La celda ubicada a **distancia** posiciones en dirección al **dirección** debe estar vacía.
-        PARÁMETROS
-            "cantidad": -Entero- Cantidad de bolitas a poner.
-            "distancia": -Entero- Distancia a poner la bolita.
-            "dirección": -Dirección- Dirección a poner la bolita.
-            "color": -Color- Color de la bolita.
+            * Dibuja una línea de longitud **largoDeLaLínea** en dirección **dirección**,
+            dejando el cabezal en la posición inicial.
+        PRECONDICIONES:
+            * La celda actual está vacía y debe haber al menos **largoDeLaLínea** celdas
+            en dirección dirección.
+        PARÁMETROS:
+            * largoDeLaLínea: Número - La longitud de la línea que se dibuja
+            * dirección : Dirección - La dirección hacia la que se dibuja la línea
     */
 
-    repeat(cantidad){
-        PonerDistanciado_EnDirección_DeColor_(distancia, dirección, color)
+    repeat(largo)
+    {
+        Poner(color)
+        Mover(dirección)
     }
 }
