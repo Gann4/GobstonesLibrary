@@ -1,0 +1,20 @@
+// /!\ FALTA COMPLETAR
+
+procedure DibujarBandaDeAlto_YAncho_DeColor_(alto, ancho, color) {
+    /*
+        PROPÓSITO:  ....
+        PARÁMETROS:
+            "alto": Entero - Alto del gráfico.
+            "ancho": Entero - Ancho del gráfico.
+            "color": Color - Color a utilizar en el gráfico.
+        PRECONDICIONES:
+            * ....
+    */
+    
+    
+}
+
+program 
+{
+
+}
