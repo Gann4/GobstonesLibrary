@@ -5,7 +5,8 @@ procedure Mover_SegúnColor_(dirección, color)
             Mueve el cabezal en dirección **dirección** tantas veces como cantidad de bolitas 
             de color **color** haya en la celda actual.
         PRECONDICIONES:
-            * Ninguna
+            *   Deben exisstir **nroBolitas(color)** celdas lindantes al **dirección** de la
+                celda actual.
         PARÁMETROS:
             "dirección": Dirección - Dirección a mover.
             "color": Color - Color a ser utilizado.
