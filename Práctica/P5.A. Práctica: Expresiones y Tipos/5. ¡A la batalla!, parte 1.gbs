@@ -1,0 +1,28 @@
+procedure EnviarAliadosParaDuplicarEnemigos() {
+    /*
+        PROPÓSITO: 
+
+        PRECONDICIONES:
+            * 
+    */
+
+    repeat(nroBolitas(Negro)*2)
+    {
+        Poner(Rojo)
+    }
+}
+
+procedure PelearLaBatalla()
+{
+    /*
+        PROPÓSITO:
+
+        PRECONDICIONES:
+            * 
+    */
+}
+
+program 
+{
+    EnviarAliadosParaDuplicarEnemigos()
+}
