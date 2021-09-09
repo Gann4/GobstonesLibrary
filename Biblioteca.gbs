@@ -64,6 +64,21 @@ procedure Sacar_DeColor_(cantidad, color)
     }
 }
 
+procedure SacarTodasDeColor_(color)
+{
+    /*
+        PROPÓSITO:
+            Saca todas las bolitas de color **color** de la celda actual.
+        PRECONDICIONES:
+            * Ninguna
+        PARÁMETROS:
+            "color": Color - Color a sacar.
+    */
+
+    Sacar_DeColor_(nroBolitas(color), color)
+}
+
+
 procedure Mover_VecesAl_(cantidad, dirección)
 {
     /*
@@ -107,14 +122,13 @@ procedure DibujarLínea_HaciaEl_DeLargo_(color, dirección, largo)
 {
     /*
         PROPÓSITO:
-            * Dibuja una línea de longitud **largoDeLaLínea** en dirección **dirección**,
-            dejando el cabezal en la posición inicial.
+            Dibuja una línea de longitud **largoDeLaLínea** en dirección **dirección**, dejando el cabezal en la posición inicial.
         PRECONDICIONES:
             * La celda actual está vacía y debe haber al menos **largoDeLaLínea** celdas
             en dirección dirección.
         PARÁMETROS:
-            * largoDeLaLínea: Número - La longitud de la línea que se dibuja
-            * dirección : Dirección - La dirección hacia la que se dibuja la línea
+            "largoDeLaLínea": Número - La longitud de la línea que se dibuja
+            "dirección": Dirección - La dirección hacia la que se dibuja la línea
     */
 
     repeat(largo)
