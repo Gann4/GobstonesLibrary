@@ -1,0 +1,64 @@
+procedure ConvertirLetraAMayúscula()
+{
+    /*
+        PROPÓSITO:
+            Convierte una letra minúscula a mayúscula.
+        PRECONDICIONES:
+            * La cantidad de bolitas negras en la celda actual debe ser mayor o igual que 97.
+        OBSERVACIONES:
+            * El valor 97 equivale a 'a'
+            * El valor 98 equivale a 'b'
+            * El valor 99 equivale a 'c'
+            * El valor 100 equivale a 'd'
+            * El valor 101 equivale a 'e'
+            * El valor 102 equivale a 'f'
+            * El valor 103 equivale a 'g'
+            * El valor 104 equivale a 'h'
+            * El valor 105 equivale a 'i'
+            * El valor 106 equivale a 'j'
+            * El valor 107 equivale a 'k'
+            * El valor 108 equivale a 'l'
+            * El valor 109 equivale a 'm'
+            * El valor 110 equivale a 'n'
+            * El valor 111 equivale a 'o'
+            * El valor 112 equivale a 'p'
+            * El valor 113 equivale a 'q'
+            * El valor 114 equivale a 'r'
+            * El valor 115 equivale a 's'
+            * El valor 116 equivale a 't'
+            * El valor 117 equivale a 'u'
+            * El valor 118 equivale a 'v'
+            * El valor 119 equivale a 'w'
+            * El valor 120 equivale a 'x'
+            * El valor 121 equivale a 'y'
+            * El valor 122 equivale a 'z'
+    */
+    
+    repeat(32)
+    {
+        Sacar(Negro)
+    }
+}
+
+procedure PasarPalabraActualAMayúsculas()
+{
+    /*
+        PROPÓSITO:
+            Toma valores ASCII y resta 32 a cada uno a lo largo de una palabra.
+        PRECONDICIONES:
+            * El cabezal debe estar ubicado en una bolita roja.
+        OBSERVACIONES:
+            * El número de bolitas rojas indica el largo de la palabra.
+    */
+    
+    repeat(nroBolitas(Rojo))
+    {
+        Mover(Este)
+        ConvertirLetraAMayúscula()
+    }
+}
+
+program 
+{
+    PasarPalabraActualAMayúsculas()
+}
