@@ -12,6 +12,12 @@ procedure EnviarAliadosParaDuplicarEnemigos() {
     }
 }
 
+/*
+Simula una batalla, suponiendo que hay suficiente cantidad de soldados aliados como para ganar la batalla. 
+Durante una batalla, 2 soldados enemigos pelean contra 3 soldados aliados y todos mueren. 
+Por ejemplo, si hay 6 enemigos y 10 aliados, mueren los 6 enemigos y 9 de los aliados; 
+si hay 10 enemigos y 21 aliados, mueren los 10 enemigos y 15 soldados aliados.
+*/
 procedure PelearLaBatalla()
 {
     /*
