@@ -1,9 +1,39 @@
+procedure Sacar_DeColor_(cantidad, color)
+{
+    /*
+        PROPÓSITO
+            Saca **cantidad** bolitas de color **color** en la celda actual.
+        PRECONDICIONES
+            Deben existir al menos **cantidad** bolitas de color **color** en la celda actual.
+        PARÁMETROS
+            "cantidad": -Entero- Cantidad de bolitas.
+            "color": -Color- Color de bolitas.
+    */
+
+    repeat(cantidad)
+    {
+        Sacar(color)
+    }
+}
+
+procedure SacarTodasDeColor_(color)
+{
+    /*
+        PROPÓSITO:
+            Saca todas las bolitas de color **color** de la celda actual.
+        PRECONDICIONES:
+            * Ninguna
+        PARÁMETROS:
+            "color": Color - Color a sacar.
+    */
+
+    Sacar_DeColor_(nroBolitas(color), color)
+}
+
 procedure EnviarAliadosParaDuplicarEnemigos() {
     /*
         PROPÓSITO: 
-
         PRECONDICIONES:
-            * 
     */
 
     repeat(nroBolitas(Negro)*2)
@@ -12,20 +42,14 @@ procedure EnviarAliadosParaDuplicarEnemigos() {
     }
 }
 
-/*
-Simula una batalla, suponiendo que hay suficiente cantidad de soldados aliados como para ganar la batalla. 
-Durante una batalla, 2 soldados enemigos pelean contra 3 soldados aliados y todos mueren. 
-Por ejemplo, si hay 6 enemigos y 10 aliados, mueren los 6 enemigos y 9 de los aliados; 
-si hay 10 enemigos y 21 aliados, mueren los 10 enemigos y 15 soldados aliados.
-*/
 procedure PelearLaBatalla()
 {
     /*
         PROPÓSITO:
-
         PRECONDICIONES:
-            * 
     */
+    Sacar_DeColor_(3 * nroBolitas(Rojo) div 2, Negro)
+    SacarTodasDeColor_(Rojo)
 }
 
 program 
