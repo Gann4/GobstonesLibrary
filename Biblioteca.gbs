@@ -97,6 +97,25 @@ procedure Mover_VecesAl_(cantidad, dirección)
     }
 }
 
+procedure Mover_SiPuede(dirección)
+{
+    /*
+    PROPÓSITO: 
+        Mueve el cabezal una celda en dirección **dirección**,
+        sólo si le es posible hacerlo, caso contrario se queda
+        en la celda actual.
+    PRECONDICIONES:
+        * Ninguna
+    PARÁMETROS:
+        "dirección": Dirección - La dirección hacia la cual mover.
+    */
+    
+    if (puedeMover(dirección))
+    {
+        Mover(dirección)
+    }
+}
+
 procedure Poner_Distanciado_EnDirección_DeColor_(cantidad, distancia, dirección, color)
 {
     /*
